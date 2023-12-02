@@ -360,7 +360,7 @@ curl "http://rpcapi.hacash.org/submit?action=transaction&hexbody=1" -X POST -d "
 
  - height [int] 要扫描的区块高度
  - txposi [int] 要扫描的交易位于区块中的数组索引位置，从0开始索引
- - txhash [string] 选传，交易哈希，如果传递了交易哈希则不用传 height、txposi 值即可直接查询交易，可用于交易是否确认的判断
+ - txhash [hex] 选传，交易哈希，如果传递了交易哈希则不用传 height、txposi 值即可直接查询交易，可用于交易是否确认的判断
  - unitmei [bool] 选传，是否以“枚”为单位返回浮点字符串
  - kind [menu] 查询返回的种类；`kind=h`只返回HAC转账， `kind=hs`返回HAC、BTC转账，不传或传递`hsd`则返回全部类型转账
  
@@ -484,7 +484,7 @@ curl "http://rpcapi.hacash.org/submit?action=transaction&hexbody=1" -X POST -d "
 
 - height [int] 要扫描的区块高度
 - txposi [int] 要扫描的交易位于区块中的数组索引位置，从0开始索引
-- txhash [string] 选传，交易哈希，如果传递了交易哈希则不用传 height、txposi 值即可直接查询交易，可用于交易是否确认的判断
+- txhash [hex] 选传，交易哈希，如果传递了交易哈希则不用传 height、txposi 值即可直接查询交易，可用于交易是否确认的判断
 - unitmei [bool] 选传，是否以“枚”为单位返回浮点字符串
 - kind [menu] 查询返回的种类；`kind=h`只返回HAC转账， `kind=hs`返回HAC、BTC转账，不传或传递`hsd`则返回全部类型转账
 - from [string] 要筛选的 from 地址，传递后仅仅会展示传入的地址，而忽略其他 from 地址
@@ -561,10 +561,11 @@ curl "http://rpcapi.hacash.org/submit?action=transaction&hexbody=1" -X POST -d "
 
 传递参数：
 
- - txhash [string] 要提升手续费的交易的 hash 值
+ - txhash [hex] 要提升手续费的交易的 hash 值
  - fee [string] 要修改的目标手续费
- - unitmei [bool] 可选，是否以单位“枚”为手续费 `fee` 字段传递的单位
  - fee_prikey [string] 手续费地址的私钥
+ - unitmei [bool] 可选，是否以单位“枚”为手续费 `fee` 字段传递的单位
+ - txbody [hex] 可选，当交易池内不存在这笔交易时，通过使用提交的txbody来修改手续费，并再次将交易广播给全网
  
 示例接口访问： [http://rpcapi.hacash.org/operate?action=raise_tx_fee&fee_prikey=8D969EEF6ECAD3C29A3A629280E686CF0C3F5D5A86AFF3CA12020C923ADC6C92&fee=ㄜ32:247&txhash=ad26a35116664176426f3c08adad147577b9a85999cb89d465becf6a27002c04](http://rpcapi.hacash.org/operate?action=raise_tx_fee&fee_prikey=8D969EEF6ECAD3C29A3A629280E686CF0C3F5D5A86AFF3CA12020C923ADC6C92&fee=ㄜ32:247&txhash=ad26a35116664176426f3c08adad147577b9a85999cb89d465becf6a27002c04)
 
