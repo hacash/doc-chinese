@@ -27,7 +27,7 @@ Hacash 白皮书的第九章“技术设计原则”中简要叙述了几项重�
 
 ### Hacash 的技术路线
 
-Vitalik 的 [新文章](https://vitalik.eth.limo/general/2023/09/30/enshrinement.html) 所讨论的大部分主题就是 Hacash 的技术路线选择。简要来说，文中所说“最小化封装”的重点，就是把可以在用户层（智能合约）实现的、最常用、最重要的某些大范围被使用的功能，下沉到核心层通过硬编码开发、封装好，用户无需再次部署自己版本的实现，只需要一行代码调用核心层接口即可使用。但相比 “最小化封装” ，有一个更能准确描述这种路线的词：“标准化封装” 。Hacash 主要通过 [层级股权控制账户](https://github.com/hacash/doc-chinese/blob/master/whitepaper.md#3-%E5%B1%82%E7%BA%A7%E8%82%A1%E6%9D%83%E6%8E%A7%E5%88%B6%E8%B4%A6%E6%88%B7) 和 [可读金融合约](https://github.com/hacash/doc-chinese/blob/master/tech/readability_contract_introduction.md) 来践行标准化封装这个技术路线。
+Vitalik 的 [新文章](https://vitalik.eth.limo/general/2023/09/30/enshrinement.html) 所讨论的大部分主题就是 Hacash 的技术路线选择。简要来说，文中所说“最小化封装”的重点，就是把可以在用户层（智能合约）实现的、最常用、最重要的某些大范围被使用的功能，下沉到核心层通过硬编码开发、封装好，用户无需再次部署自己版本的实现，只需要一行代码调用核心层接口即可使用。但相比 “最小化封装” ，有一个更能准确描述这种路线的词：“标准化封装” 。Hacash 主要通过 [层级股权控制账户](https://github.com/hacash/doc-chinese/blob/main/whitepaper.md#3-%E5%B1%82%E7%BA%A7%E8%82%A1%E6%9D%83%E6%8E%A7%E5%88%B6%E8%B4%A6%E6%88%B7) 和 [可读金融合约](https://github.com/hacash/doc-chinese/blob/main/tech/readability_contract_introduction.md) 来践行标准化封装这个技术路线。
 
 Hacash 的终极愿景是“加密健全货币”，为满足货币的发行、支付及衍生的清算、应用等金融需求为基础而构建。这种以资产、价值叙事为导向的目标，与去中心化应用公链平台这种纯技术叙事，在架构设计上有着完全不同的考量和侧重。相比技术平台，货币金融的核心层更需要稳定、安全和简单、可靠，更加无法容忍出错，这意味着后者在灵活性上可能有所制约，比如在 Layer1 层不支持图灵完备的智能合约，或者将来只支持一种在可靠性方面严格设计的“安全智能合约”。
 
@@ -39,7 +39,7 @@ Hacash 的终极愿景是“加密健全货币”，为满足货币的发行、�
 
 ### 优缺点对比
 
-我们以 Hacash 的 [可读金融合约](https://github.com/hacash/doc-chinese/blob/master/tech/readability_contract_introduction.md) 为代表的“标准化封装”路线和以太坊的`智能合约`为代表的“协议最小化”路线来进行对比，探讨两者在各方面的优势与不足，以便能更加直观地展现 Hacash 的技术哲学理念。
+我们以 Hacash 的 [可读金融合约](https://github.com/hacash/doc-chinese/blob/main/tech/readability_contract_introduction.md) 为代表的“标准化封装”路线和以太坊的`智能合约`为代表的“协议最小化”路线来进行对比，探讨两者在各方面的优势与不足，以便能更加直观地展现 Hacash 的技术哲学理念。
 
 #### 标准化封装好处
 
@@ -89,7 +89,7 @@ Hacash 的终极愿景是“加密健全货币”，为满足货币的发行、�
 
 协议标准的统一能极大降低沟通成本。对主流金融需求的满足是由一套相同的主网代码保证，参与方不需要耗费精力去理解各种智能合约之间的差异和细节，也无需由专业程序员来翻译合约内部到底做了什么。一切沟通都在一套相同的概念上下文中高效进行。
 
-如需在技术层面理解 Hacash 可读金融合约的技术原理及交易结构，可查看文档： [Hacash 可读金融合约简介及技术说明](https://github.com/hacash/doc-chinese/blob/master/tech/readability_contract_introduction.md) ，里面通过创造两个简单的合约示例来解释。
+如需在技术层面理解 Hacash 可读金融合约的技术原理及交易结构，可查看文档： [Hacash 可读金融合约简介及技术说明](https://github.com/hacash/doc-chinese/blob/main/tech/readability_contract_introduction.md) ，里面通过创造两个简单的合约示例来解释。
 
 #### 协议最小化优点
 

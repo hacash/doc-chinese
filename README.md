@@ -1,11 +1,10 @@
-# paper
+# Doc of Chinese
 Whitepaper & Hacash improvement proposals & theoretical articles
 
 
 
-- [Whitepaper](/https://github.com/hacash/paper/blob/master/whitepaper.en.pdf)
-- [Whitepaper (Chinese)](https://github.com/hacash/paper/blob/master/whitepaper.cn.md)
-- [HIP Table (Hacash improvement proposals list)](https://github.com/hacash/paper/blob/master/HIP/HIP-table.md)
+- [Whitepaper (Chinese)](https://github.com/hacash/doc-chinese/blob/main/whitepaper.md)
+- [HIP Table (Hacash improvement proposals list)](https://github.com/hacash/doc-chinese/blob/main/HIP/HIP-table.md)
 
 
 
