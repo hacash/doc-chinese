@@ -8,15 +8,15 @@ Hacash 交易广播和交易池操作重要事项
 
 ### 设计说明
 
-#### 1. Block confirmation
+#### 1. 区块确认
 
-Hacash's unique anti-51% attack technology [Beacon Tower Protocol](https://github.com/hacash/paper/blob/master/HIP/protocol/tech/PoW_of_avoid_51_percent_attack.md) protects the blockchain from malicious attacks.
+Hacash 独创的防 51% 算力攻击的技术 [烽火台协议](https://github.com/hacash/doc-chinese/blob/main/HIP/protocol/tech/PoW_of_avoid_51_percent_attack.md) 能保护区块链不被恶意攻击。
 
-In addition to analyzing and blocking malicious hashrate attacks, this protocol also stipulates the Hacash blockchain fork checkpoint: 4 blocks. This means that transactions that are highly confirmed by 4 or more blocks are secure and non-reversible, but, transactions that are less than 4 block of confirmation may be reversed.
+此协议除了对恶意算力攻击行为进行分析和阻挡之外，还规定了 Hacash 区块链分叉检查点：4个区块。 这意味着被4个区块高度确认的交易是安全的、不可回退的，而在4个区块确认以内的交易有可能被撤销。
 
-> It is recommended that exchanges set a waiting (final confirmation) time of 4 blocks for large deposits, otherwise they may be exploited maliciously
+> 建议交易所为大额充值设置 4 个区块的等待（最终确认）时间，否则有可能被恶意利用
 
-#### 2. Transaction pools
+#### 2. 交易池
 
 Hacash 的交易池是一个具有最大容量的内存池（Memtxpool），选择这一实现方案基于以下原因：
 
