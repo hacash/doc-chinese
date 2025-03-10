@@ -549,7 +549,8 @@ url 参数如下：
 - fee [string] 要修改的目标手续费
 - fee_prikey [string] 手续费地址的私钥
 - unit [string] HAC 单位
-- tx_body [hex] 可选，当交易池内不存在这笔交易时，通过使用提交的tx_body来修改手续费，并再次将交易广播给全网
+
+注意：当交易池内不存在这笔交易时，通过使用 POST 提交的 HTTP BODY 来修改手续费，并再次将交易广播给全网
 
 示例接口: 
 
