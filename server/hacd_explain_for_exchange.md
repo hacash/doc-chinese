@@ -56,13 +56,18 @@ HACD 将在其区块链的状态数据中，保存一个所属者的地址，用
 
 当手动从冷钱包提取 HACD 到热钱包时，可以去 [区块链浏览器](https://explorer.hacash.org/) 查看冷钱包地址内的 HACD 名称列表，然后手动发起转账。
 
-> 【便捷接口】如果这种归集和冷热维护需要程序自动化，那么区块浏览器提供了一个查询单个地址所拥有的钻石字面值的接口： [https://explorer.hacash.org/api/ranking/diamonds?address=1QDc1twwVy3acuftAv3GuNnKwxopYi9VLb](https://explorer.hacash.org/api/ranking/diamonds?address=1QDc1twwVy3acuftAv3GuNnKwxopYi9VLb) 
+> 【便捷接口】如果这种归集和冷热维护需要程序自动化，那么全节点提供了一个查询单个地址所拥有的钻石字面值的接口： [https://github.com/hacash/doc-chinese/blob/main/server/fullnode_api_doc.md#31-%E6%9F%A5%E8%AF%A2%E8%B4%A6%E6%88%B7%E4%BD%99%E9%A2%9D--get-querybalance](ttps://github.com/hacash/doc-chinese/blob/main/server/fullnode_api_doc.md#31-%E6%9F%A5%E8%AF%A2%E8%B4%A6%E6%88%B7%E4%BD%99%E9%A2%9D--get-querybalance) 
+> 需要全节点配置开启 `[server]` 下的 `diamond_form = true` 字段
 
 返回值如下：
 
 ```js
 {
-    diamonds: "KEATNHZVHIVYTBSVUWEUBUUWHZNVMIHNWSVUWUXNXVASYXTVTNSBHBUWMYUM",
+    list: [
+        {   /* ... other ... */
+            diamonds: "KEATNHZVHIVYTBSVUWEUBUUWHZNVMIHNWSVUWUXNXVASYXTVTNSBHBUWMYUM",
+        }
+    ]
     ret: 0,
 }
 ```
