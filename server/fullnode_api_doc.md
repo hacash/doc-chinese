@@ -535,6 +535,28 @@ url 参数如下：
 }
 ```
 
+
+#### 3.9 查询平均手续费 `GET: /query/fee/average`
+
+获取区块链当前区块的实时平均费用（推荐费用）。
+
+参数:
+
+- consumption [int] Tx 字节大小，普通 Hacash 交易的手续费是按大小计算的，当交易规模较大时，需要支付的费用更多。此参数将在传递时返回建议的 tx 费用
+- unit [string] 可选，HAC 返回单位 "mei" or "248"
+
+示例请求：[http://nodeapi.hacash.org/query/fee/average?consumption=120](http://nodeapi.hacash.org/query/fee/average?consumption=120)
+ 
+示例返回值：
+ 
+```js
+{
+    ret: 0,
+    feasible: "6024:240" // 推荐的大小为 120 字节的 TX 的费用设置
+}
+```
+
+
 ---
 
 ## 4. /operate 修改、操作
