@@ -542,7 +542,7 @@ url 参数如下：
 
 参数:
 
-- consumption [int] Tx 字节大小，普通 Hacash 交易的手续费是按大小计算的，当交易规模较大时，需要支付的费用更多。此参数将在传递时返回建议的 tx 费用
+- consumption [int] Tx 字节大小（包含所有签名在内的完整尺寸），普通 Hacash 交易的手续费是按大小计算的，当交易规模较大时，需要支付的费用更多。此参数将在传递时返回建议的 tx 费用
 - unit [string] 可选，HAC 返回单位 "mei" or "248"
 
 示例请求：[http://nodeapi.hacash.org/query/fee/average?consumption=120](http://nodeapi.hacash.org/query/fee/average?consumption=120)
