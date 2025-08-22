@@ -84,7 +84,6 @@ console.log(account)
 ```
 
 `account` 返回值示例：
-
 ```js
 {
 
@@ -144,7 +143,7 @@ console.log(txres.body)
 `body` 值为已经包含了签名的交易体，可以直接向全节点提交。
 
 
-#### 4. 签署一笔交易 sign_tx
+#### 4. 签署一笔交易 sign_transaction
 
 ```js
 
@@ -152,7 +151,7 @@ let stps = new sdk.SignTxParam()
 stps.prikey = "abc123"
 stps.body = "0200689e96d400e63c33a796b3032ce6b856f68fccf06608d9ed18f401010002000100e63c33a796b3032ce6b856f68fccf06608d9ed18f8010c000a00e63c33a796b3032ce6b856f68fccf06608d9ed180000000000b71b0000010231745adae24044ff09c3541537160abb8d5d720275bbaeed0b3d035b1e8b263c9b607f2bd9e1031536c13741facb78585755c116aa7d10628ebc2adbb4be96493bc1bb8ac6c3e78dee6717b9c4a27280b698efc91097d5900418a59c9d8e7ac30000" // tx body
 try {
-    let resg = sdk.sign_tx(stps)
+    let resg = sdk.sign_transaction(stps)
     console.log("sign res:", resg)
     console.log("tx body:", resg.body)
 }catch(e) {
