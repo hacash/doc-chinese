@@ -70,7 +70,7 @@ Node.js 环境在加载 js 模块时将自动初始化 WASM SDK，Web 方式则�
 
 ### SDK 文档
 
-#### 1. 创建账户 create_account
+#### 1. 创建账户 `create_account`
 
 ```js
 // password
@@ -94,7 +94,7 @@ console.log(account)
 }
 ```
 
-#### 2. 验证地址有效性 verify_address
+#### 2. 验证地址有效性 `verify_address`
 
 ```js
 let addr = "1MzNY1oA3kfgYi75zquj3SRUPYztzXHzK9"
@@ -110,7 +110,7 @@ let result = sdk.verify_address(addr)
 }
 ```
 
-#### 3. 生成转账交易 create_coin_transfer
+#### 3. 生成转账交易 `create_coin_transfer`
 
 ```js
 
@@ -143,7 +143,7 @@ console.log(txres.body)
 `body` 值为已经包含了签名的交易体，可以直接向全节点提交。
 
 
-#### 4. 签署一笔交易 sign_transaction
+#### 4. 签署一笔交易 `sign_transaction`
 
 ```js
 
